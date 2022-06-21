@@ -6,13 +6,12 @@ import java.util.Random;
 
 @RestController
 public class NumberGeneratorController {
-    Random rand = new Random();
-    int upperbound = 100;
-    int int_random = rand.nextInt(upperbound);
+    NumberGenerator gen = new NumberGenerator();
+
 
     @GetMapping("/api")
     public int random(){
-        return int_random;
+        return gen.random();
     }
 
 }
